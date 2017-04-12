@@ -9,7 +9,11 @@
     <div class="jumbotron">
         <h1>Congratulations!</h1>
 
-        <p class="lead">You have successfully created your Yii-powered application.</p>
+<iframe width="420" height="315"
+src="https://www.youtube.com/embed/1Bix44C1EzY?autoplay=1&loop=1">">
+</iframe>
+
+        <p class="lead">Great work Big Man Tyrone. You have successfully created your Yii-powered application.</p>
 
         <p><a class="btn btn-lg btn-success" href="http://www.yiiframework.com">Get started with Yii</a></p>
     </div>
