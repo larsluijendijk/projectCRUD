@@ -1,6 +1,5 @@
-<<<<<<< HEAD
 <title>Jenk</title>
-=======
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -72,4 +71,3 @@
             </div>
         </div>
     </nav>
->>>>>>> 54955e2107f304bf37cb92e882212e5c94847ec6
