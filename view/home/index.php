@@ -1,3 +1,6 @@
+<?php
+  include 'headers.php';
+?>
     <div class="container">
 
         <div class="bg-faded p-4 my-4">
@@ -67,3 +70,6 @@
 
     </div>
     <!-- /.container -->
+<?php
+  include 'footers.php';
+?>
