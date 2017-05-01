@@ -12,15 +12,13 @@
  }  
  ?>
 <div class="container">
-	<table border="1">
-		<tr>
-			<th>#</th>
-			<th>Voornaam</th>
-			<th>Achternaam</th>
-			<th>Geslacht</th>
-			<th colspan="2">Actie</th>
-		</tr>
-		
-	</table>
+    <?php foreach ($producten as $product) { ?>
+    <tr>
+      <input type="hidden" value="<?= $product['id']; ?>">
+      <td><?= $product['name']; ?></td>
+      <td><?= $product['description']; ?></td>
+      <td><?= $product['image']; ?></td>
+    </tr>
+    <?php } ?>
 	<a href="<?= URL ?>student/create">Toevoegen</a>
 </div>

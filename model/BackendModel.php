@@ -33,10 +33,25 @@ $connect->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
                 else  
                 {  
                      header("location:login");
-                }  
-           }  
-      }  
- }  
+                }
+           }
+      }
+ }
+
+
+function getAllProducten() 
+{
+	$db = openDatabaseConnection();
+
+	$sql = "SELECT * FROM product";
+	$query = $db->prepare($sql);
+	$query->execute();
+
+	$db = null;
+
+	return $query->fetchAll();
+
+}
 
 function pia(){
 	echo "we gaan naar piazza";

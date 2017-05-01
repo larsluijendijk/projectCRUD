@@ -4,7 +4,7 @@
 <html lang="en">
 
 <head>
-
+    <style>.carousel-inner > .item > img { width:100%; height:570px; } </style>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
@@ -40,14 +40,18 @@
     .carousel-item-prev {
         display: block;
     }
+    .carousel-inner > .item > img {
+  width:840px;
+  height:400px;
+}
     </style>
 
 </head>
 
 <body>
 
-    <div class="tagline-upper text-center text-heading text-shadow text-white mt-4 hidden-md-down">Vintage</div>
-    <div class="tagline-lower text-center text-expanded text-shadow text-uppercase text-white mb-4 hidden-md-down">3481 Melrose Place | Beverly Hills, CA 90210 | 123.456.7890</div>
+    <div class="tagline-upper text-center text-heading text-shadow text-white mt-4 hidden-md-down">JENK</div>
+    <div class="tagline-lower text-center text-expanded text-shadow text-uppercase text-white mb-4 hidden-md-down">vintage en design</div>
 
     <!-- Navigation -->
     <nav class="navbar navbar-toggleable-md navbar-light navbar-custom bg-faded py-lg-4">
