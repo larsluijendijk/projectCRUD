@@ -1,3 +1,6 @@
+<?php
+require("include.php");
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -52,7 +55,7 @@ body {
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
   <a href="http://localhost/ProjectCRUD/backend/overview">Overview</a>
   <a href="http://localhost/ProjectCRUD/backend/view">Producten</a>
-  <a href="#">Log out</a>
+  <a href="http://localhost/ProjectCRUD/backend/logout">Log out</a>
 </div>
 <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Instellingen</span>
 <center><h1><font>Producten</font></h1><center>
