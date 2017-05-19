@@ -19,15 +19,13 @@ function userLoginAction(){
                 // bestaat de gebruiker?
                 $user = getUser($_POST["username"]);
 	                if($user != null) {
-	                	$password = getPassword($user);
 						//controleer zijn wachtwoord
-						if (verifyPassword($_POST["password"], "admin")) {
-							echo "yup";
+						if (verifyPassword($_POST["password"], $user['password'])) {
+							echo "Login succes!";
 							//header("location:index");
 						} 
 						else{
-						echo"Verify failed! Please, insert the correct data:";
-						echo$_POST["password"];
+						echo"Verify failed! Please, insert the correct data.";
 						}
 	                }	
            }
@@ -39,24 +37,17 @@ function userLoginAction(){
 function getUser($login_username) {
 	// haal de gebruiker op uit de database
 	$connect = openDatabaseConnection();
-	$query = "SELECT * FROM user WHERE username = '$login_username'";  
-                $statement = $connect->prepare($query);  
-                $statement->execute(  
-                     array(  
-                          'username'     =>     $_POST["username"]
-                          )
-                     );
-                $username = $statement->fetch(PDO::FETCH_ASSOC);
-				return $username;
-}
+	$query = "SELECT * FROM user WHERE username = '$login_username'";
 
-function getPassword($user){
-	$connect = openDatabaseConnection();
-	$query = "SELECT password FROM user WHERE username = '$user'";  
-                $statement = $connect->prepare($query);  
-				$statement->execute();
-                $password = $statement->fetch(PDO::FETCH_ASSOC);
-				return $password;
+    $statement = $connect->prepare($query);  
+    $statement->execute(  
+         array(  
+              'username'     =>     $_POST["username"]
+              )
+         );
+    $user = $statement->fetch(PDO::FETCH_ASSOC);
+	
+	return $user;
 }
 
 function verifyPassword($login_password, $user_password) {
@@ -64,9 +55,8 @@ function verifyPassword($login_password, $user_password) {
 		return true;
 	}
 	else{
-		return false;
-	}
 	return false;
+	}
 }
 
 function getAllProducten() 
