@@ -6,74 +6,28 @@
 
         <div class="bg-faded p-4 my-4">
             <hr class="divider">
-            <h2 class="text-center text-lg text-uppercase my-0">Contact <strong>Business Casual</strong></h2>
+            <h2 class="text-center text-lg text-uppercase my-0"><strong>Contact</strong></h2>
             <hr class="divider">
             <div class="row">
                 <div class="col-lg-8">
-                    <div class="embed-responsive embed-responsive-16by9 map-container mb-4 mb-lg-0">
-                        <iframe frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.com/maps?hl=en&amp;ie=UTF8&amp;ll=37.0625,-95.677068&amp;spn=56.506174,79.013672&amp;t=m&amp;z=4&amp;output=embed"></iframe>
-                    </div>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1710.7874755932812!2d4.660963465908894!3d51.816137754591175!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c42ecc2f4ac0e9%3A0xca20e8a4e113f1ff!2sHoge+Nieuwstraat+113%2C+3311+AJ+Dordrecht!5e0!3m2!1snl!2snl!4v1495095287323" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
                 </div>
                 <div class="col-lg-4">
-                    <h5 class="mb-0">Phone:</h5>
-                    <div class="mb-4">123.456.7890</div>
-                    <h5 class="mb-0">Email:</h5>
-                    <div class="mb-4"><a href="mailto:name@example.com">name@example.com</a></div>
-                    <h5 class="mb-0">Address:</h5>
-                    <div class="mb-4">
-                        3481 Melrose Place
-                        <br> Beverly Hills, CA 90210
-                    </div>
+                    <div class="mb-4">Hoge Nieuwstraat 113</div>
+                    <div class="mb-4">Dordrecht</div>
+                    <div class="mb-4">Tel: 06 29103661 / 06 51707684</div>
+                    <div class="mb-4">E-mail: jenk113115@gmail.com</div>
+                    <div class="mb-4">Facebook: JenkDordrecht</div>
                 </div>
             </div>
         </div>
-
-        <div class="bg-faded p-4 my-4">
-            <hr class="divider">
-            <h2 class="text-center text-lg text-uppercase my-0">Contact <strong>Form</strong></h2>
-            <hr class="divider">
-            <form>
-                <div class="row">
-                    <div class="form-group col-lg-4">
-                        <label class="text-heading">Name</label>
-                        <input type="text" class="form-control">
-                    </div>
-                    <div class="form-group col-lg-4">
-                        <label class="text-heading">Email Address</label>
-                        <input type="email" class="form-control">
-                    </div>
-                    <div class="form-group col-lg-4">
-                        <label class="text-heading">Phone Number</label>
-                        <input type="tel" class="form-control">
-                    </div>
-                    <div class="clearfix"></div>
-                    <div class="form-group col-lg-12">
-                        <label class="text-heading">Message</label>
-                        <textarea class="form-control" rows="6"></textarea>
-                    </div>
-                    <div class="form-group col-lg-12">
-                        <button type="submit" class="btn btn-secondary">Submit</button>
-                    </div>
-                </div>
-            </form>
-        </div>
-
-    </div>
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/tether/tether.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
 
     <!-- Zoom when clicked function for Google Map -->
-    <script>
-    $('.map-container')
-        .click(function() {
-            $(this).find('iframe').addClass('clicked')
-        })
-        .mouseleave(function() {
-            $(this).find('iframe').removeClass('clicked')
-        });
-    </script>
+
 <?php
   include 'footers.php';
 ?>

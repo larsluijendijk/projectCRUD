@@ -1,5 +1,7 @@
 <?php
 
+require(ROOT . "model/HomeModel.php");
+
 function index()
 {
 	render("home/index");	
@@ -7,7 +9,9 @@ function index()
 
 function store()
 {
-    render("home/store");
+	render("home/store", array(
+		'producten' => getAllProducten()
+	));
 }
 
 function contact()

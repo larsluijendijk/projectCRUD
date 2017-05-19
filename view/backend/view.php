@@ -1,6 +1,3 @@
-<?php
-require("include.php");
-?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -53,16 +50,13 @@ body {
 
 <div id="mySidenav" class="sidenav">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-  <a href="http://localhost/ProjectCRUD/backend/overview">Overview</a>
-  <a href="http://localhost/ProjectCRUD/backend/view">Producten</a>
-  <a href="http://localhost/ProjectCRUD/backend/logout">Log out</a>
+  <a href="http://localhost/projectCRUD/backend/overview">Overview</a>
+  <a href="http://localhost/projectCRUD/backend/view">Producten</a>
+  <a href="http://localhost/projectCRUD/backend/logout.php">Log out</a>
 </div>
 <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Instellingen</span>
 <center><h1><font>Producten</font></h1><center>
 <center><p><font>Hier zijn alle producten te zien</font></p><center>
-
-
-<img src="https://img.clipartfest.com/8cbd203baf35658c2d3ad36bb9a3318b_light-bulb-lightbulb-clipart-transparent-background_594-596.png" alt="Mountain View" style="width:400px;height:428px;">
 
 <script>
 function openNav() {
@@ -72,7 +66,51 @@ function openNav() {
 function closeNav() {
     document.getElementById("mySidenav").style.width = "0";
 }
+
 </script>
      
 </body>
 </html> 
+
+<?php  
+ //login_success.php  
+ session_start();  
+ if(isset($_SESSION["username"]))  
+ {  
+      echo '<h3>Login Success, Welcome - '.$_SESSION["username"].'</h3>';  
+      echo '<a href="logout">Logout</a>';  
+ }  
+ else  
+ {  
+      redirect("location:login");  
+ }  
+ 
+ 
+?>
+<!-- <div class="row marketing">
+<div class="container"> -->
+  <table border="1">
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Image</th>
+      <th>Price</th>
+      <th>Edit</th>
+      <th>Delete</th>
+    </tr>
+    <?php foreach ($producten as $product) { ?>
+
+
+    <tr>
+      <input type="hidden" value="<?= $product['id']; ?>">
+      <td><?= $product['name']; ?></td>
+      <td><?= $product['description']; ?></td>
+      <td><?= $product['image']; ?></td>
+      <td><?= $product['price']; ?></td> 
+      <td><a href="<?= URL ?>backend/edit/<?= $product['id'] ?>">Edit</a></td>
+      <td><a href="<?= URL ?>backend/delete/<?= $product['id'] ?>" onclick="return confirm('Are you sure you want to delete this item?');"">Delete</a></td>
+    </tr>
+    <?php } ?>
+  <a href="<?= URL ?>backend/create">Toevoegen</a>
+<!-- </div>
+</div> 

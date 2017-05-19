@@ -15,21 +15,18 @@
                         <img class="d-block img-fluid w-100" src="<?= URL ?>img/slide-1.jpg" alt="">
                         <div class="carousel-caption d-none d-md-block">
                             <h3 class="text-shadow">Vintage Design</h3>
-                            <p class="text-shadow">This is the caption for the first slide.</p>
                         </div>
                     </div>
                     <div class="carousel-item">
                         <img class="d-block img-fluid w-100" src="<?= URL ?>img/slide-2.jpg" alt="">
                         <div class="carousel-caption d-none d-md-block">
-                            <h3 class="text-shadow">Second Slide</h3>
-                            <p class="text-shadow">This is the caption for the second slide.</p>
+                            <h3 class="text-shadow">Vintage Design</h3>
                         </div>
                     </div>
                     <div class="carousel-item">
                         <img class="d-block img-fluid w-100" src="<?= URL ?>img/slide-3.jpg" alt="">
                         <div class="carousel-caption d-none d-md-block">
-                            <h3 class="text-shadow">Third Slide</h3>
-                            <p class="text-shadow">This is the caption for the third slide.</p>
+                            <h3 class="text-shadow">Vintage Design</h3>
                         </div>
                     </div>
                 </div>
@@ -51,22 +48,14 @@
 
         <div class="bg-faded p-4 my-4">
             <hr class="divider">
-            <h2 class="text-center text-lg text-uppercase my-0">This is <strong>A test</strong></h2>
+            <h2 class="text-center text-lg text-uppercase my-0"><strong>Introductie</strong></h2>
             <hr class="divider">
             <img class="img-fluid float-left hidden-md-down mr-lg-4" src="<?= URL ?>img/intro-pic.jpg" alt="">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam soluta dolore voluptatem, deleniti dignissimos excepturi veritatis cum hic sunt perferendis ipsum perspiciatis nam officiis sequi atque enim ut! Velit, consectetur.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam pariatur perspiciatis reprehenderit illo et vitae iste provident debitis quos corporis saepe deserunt ad, officia, minima natus molestias assumenda nisi velit?</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit totam libero expedita magni est delectus pariatur aut, aperiam eveniet velit cum possimus, autem voluptas. Eum qui ut quasi voluptate blanditiis?</p>
+            <p>In het historisch havengebied van Dordrecht, niet ver van de grote kerk is Jenk gevestigd. Jenk is een bijzondere winkel waar u naast van alles uit de sixties en seventies, ook vintage en hedendaags design kunt vinden.</p>
+            <br>
+            <br>
+            <br>
         </div>
-
-        <div class="bg-faded p-4 my-4">
-            <hr class="divider">
-            <h2 class="text-center text-lg text-uppercase my-0">Boxes to <strong>showcase your content</strong></h2>
-            <hr class="divider">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam soluta dolore voluptatem, deleniti dignissimos excepturi veritatis cum hic sunt perferendis ipsum perspiciatis nam officiis sequi atque enim ut! Velit, consectetur.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam pariatur perspiciatis reprehenderit illo et vitae iste provident debitis quos corporis saepe deserunt ad, officia, minima natus molestias assumenda nisi velit?</p>
-        </div>
-
     </div>
     <!-- /.container -->
 <?php
