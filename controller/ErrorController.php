@@ -1,6 +1,6 @@
 <?php
 
-function index()
+function error()
 {
-	echo "Error can't do function.";
+	echo"SORRY! We couldn't find that page! Are you supposed to be here?";
 }

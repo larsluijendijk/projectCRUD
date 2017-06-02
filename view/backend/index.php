@@ -9,16 +9,7 @@
  else  
  {  
       header("location:login");  
- }  
+ }
+ header("Location:" . URL . "backend/overview");
  ?>
-<div class="container">
-    <?php foreach ($producten as $product) { ?>
-    <tr>
-      <input type="hidden" value="<?= $product['id']; ?>">
-      <td><?= $product['name']; ?></td>
-      <td><?= $product['description']; ?></td>
-      <td><?= $product['image']; ?></td>
-    </tr>
-    <?php } ?>
-	<a href="<?= URL ?>student/create">Toevoegen</a>
 </div>

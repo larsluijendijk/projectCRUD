@@ -10,20 +10,20 @@
         <hr class="divider">
         <div class="row">
             <div class="col-lg-4">
-                <h3 class="text-center text-lg text-uppercase my-0"><strong><a href="<?= URL ?>home/chair">Stoelen</a></strong></h3>
-                <img width="304" height="130" src="<?= URL ?>img/stoelen.jpg" alt="">
+                <h3 class="text-center text-lg text-uppercase my-0"><strong><a href="<?= URL ?>home/stoelen">Stoelen</a></strong></h3>
+                <img width="304" height="130" src="<?= URL ?>img/stoel-example.png" alt="">
             </div>
             <div class="col-lg-4">
-               <h3 class="text-center text-lg text-uppercase my-0"><strong><a href="<?= URL ?>home/table">Tafels</a></strong></h3>
-                <img width="304" height="130" src="<?= URL ?>img/tafels.jpg" alt="">
+               <h3 class="text-center text-lg text-uppercase my-0"><strong><a href="<?= URL ?>home/tafels">Tafels</a></strong></h3>
+                <img width="304" height="130" src="<?= URL ?>img/table.png" alt="">
             </div>
             <div class="col-lg-4">
-               <h3 class="text-center text-lg text-uppercase my-0"><strong><a href="<?= URL ?>home/verlichting">Verlichting</a></strong></h3>
-                <img width="304" height="130" src="<?= URL ?>img/verlichting.jpg" alt="">
+               <h3 class="text-center text-lg text-uppercase my-0"><strong><a href="<?= URL ?>home/verlichtingen">Verlichting</a></strong></h3>
+                <img width="304" height="130" src="<?= URL ?>img/lamp-2.png" alt="">
             </div>
             <div class="col-lg-4">
                <h3 class="text-center text-lg text-uppercase my-0"><strong><a href="<?= URL ?>home/diverse">Diverse</a></strong></h3>
-                <img width="304" height="130" src="<?= URL ?>img/diverse.jpg" alt="">
+                <img width="304" height="130" src="<?= URL ?>img/pot.png" alt="">
             </div>
         </div>
     </div>

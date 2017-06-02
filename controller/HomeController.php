@@ -18,4 +18,12 @@ function contact()
 {
     render("home/contact");
 }
+
+function stoelen()
+{
+    render("home/stoelen", array(
+    	'stoelen' => getAllStoelen()
+    	));
+}
+
 ?>

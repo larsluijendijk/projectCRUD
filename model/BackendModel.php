@@ -21,8 +21,8 @@ function userLoginAction(){
 	                if($user != null) {
 						//controleer zijn wachtwoord
 						if (verifyPassword($_POST["password"], $user['password'])) {
-							echo "Login succes!";
-							//header("location:index");
+							$_SESSION["username"] = $_POST["username"];
+							header("location:overview");
 						} 
 						else{
 						echo"Verify failed! Please, insert the correct data.";
@@ -81,7 +81,7 @@ function pia(){
 function createClient($name, $description, $image, $price) 
 {
   $db = openDatabaseConnection();
-  // echo test om te kijken of ie binnen komtaijh
+  // echo test om te kijken of ie binnen komt
   var_dump($_POST);
   $sql = "INSERT INTO product(name, description, image, price) VALUES (:name, :description, :image, :price)";
   $query = $db->prepare($sql);
@@ -142,4 +142,47 @@ function showUpdateProduct($id){
       return $result;
     endif;
 }
+
+function uploadFile ($file){
+	// Files Inhoud:
+	if ($file['size'] == 0) return null;
+	$file_name=$file['name'];
+	$file_tmp=$file['tmp_name'];
+	$file_size=$file['size'];
+	$file_error=$file['error'];    
+	    
+	// File extension:
+
+	// Dit maakt $file_name naar een Array:
+	$file_ext = explode('.', $file_name);  
+	// End pakt het einde van de array, en dat is de $file_ext, en de extensies zijn alleen lowercase:
+	$file_ext = strtolower(end($file_ext));
+
+	$allowed = array("png", "jpg", "gif");
+	// in_array kijkt of de value in een Array is | $file_ext is in de $allowed array | jpg mag wel, word doc mag niet:
+	if(in_array($file_ext, $allowed)){
+        // TODO $_SESSION['errors'][] = "verboden extentie";
+	// Kijkt of er een error is:
+	    if($file_error === 0){
+            // Todo errorhandling
+	// Als de file kleiner is dan 2MB:
+	        if($file_size <= 2097152){
+                // Todo errorhandling
+	// De naam van de file wordt random gemaakt:
+	            $file_name_new = uniqid('',true) . '.' . $file_ext;
+	// De plek waar het opgeslagen wordt:
+	            $file_destination = '../public/img' . $file_name_new;
+	// Als het verplaatsen van de file gelukt is:
+	            if(move_uploaded_file($file_tmp, $file_destination)) {
+	                   return $file_destination;
+                }
+                else {
+                    // Todo errorhandling
+                }
+            }
+        }
+    }
+    return null;
+}
+
 ?>

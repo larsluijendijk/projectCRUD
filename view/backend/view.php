@@ -1,6 +1,10 @@
+<?php
+require("include.php");
+?>
 <!DOCTYPE html>
 <html>
 <head>
+<meta charset="UTF-8">
 <style>
 body {
     font-family: "Lato", sans-serif;
@@ -71,42 +75,28 @@ function closeNav() {
      
 </body>
 </html> 
-
-<?php  
- //login_success.php  
- session_start();  
- if(isset($_SESSION["username"]))  
- {  
-      echo '<h3>Login Success, Welcome - '.$_SESSION["username"].'</h3>';  
-      echo '<a href="logout">Logout</a>';  
- }  
- else  
- {  
-      redirect("location:login");  
- }  
- 
- 
-?>
 <!-- <div class="row marketing">
 <div class="container"> -->
   <table border="1">
     <tr>
-      <th>Name</th>
-      <th>Description</th>
-      <th>Image</th>
-      <th>Price</th>
-      <th>Edit</th>
-      <th>Delete</th>
+      <th>Foto</th>
+      <th>Naam</th>
+      <th>Descriptie</th>
+      <th>Prijs</th>
+      <th>Category</th>
+      <th>Aanpassen</th>
+      <th>Verwijderen</th>
     </tr>
     <?php foreach ($producten as $product) { ?>
 
 
     <tr>
       <input type="hidden" value="<?= $product['id']; ?>">
+      <td><img width="150" height="150" src="<?= $product['image']?>" alt="stoel"></td>
       <td><?= $product['name']; ?></td>
       <td><?= $product['description']; ?></td>
-      <td><?= $product['image']; ?></td>
-      <td><?= $product['price']; ?></td> 
+      <td>€<?= $product['price']; ?></td>
+      <td><?= $product['category']; ?></td> 
       <td><a href="<?= URL ?>backend/edit/<?= $product['id'] ?>">Edit</a></td>
       <td><a href="<?= URL ?>backend/delete/<?= $product['id'] ?>" onclick="return confirm('Are you sure you want to delete this item?');"">Delete</a></td>
     </tr>

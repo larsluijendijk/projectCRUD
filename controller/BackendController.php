@@ -18,10 +18,12 @@ function index()
 		'producten' => getAllProducten()
 	));
 }
-function login(){
+function login()
+{
 	render("backend/login");
 }
-function logout(){
+function logout()
+{
 	render("backend/logout");
 }
 function create()
@@ -32,13 +34,15 @@ function create()
 	render("backend/create");
 }
 function createSave()
-{   var_dump($_POST);
+{
+	uploadfile($_FILES);
 	if (isset($_POST['name']) && isset($_POST['description']) && isset($_POST['image']) && isset($_POST['price'])){
 		var_dump($_POST);
-		createDier($_POST['name'], $_POST['description'], $_POST['image'], $_POST['price']);
+		createClient($_POST['name'], $_POST['description'], $_POST['image'], $_POST['price']);
 	}
 }
-function createUpdate(){
+function createUpdate()
+{
 		if (isset($_POST['id']) && isset($_POST['name']) && isset($_POST['description']) && isset($_POST['image']) && isset($_POST['price'])){
 		updateProduct($_POST['id'], $_POST['name'], $_POST['description'], $_POST['image'], $_POST['price']);
 	}
@@ -56,3 +60,4 @@ function edit($id)
 	}
 
 }	
+
