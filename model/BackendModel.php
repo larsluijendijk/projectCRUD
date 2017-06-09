@@ -18,19 +18,20 @@ function userLoginAction(){
            {  
                 // bestaat de gebruiker?
                 $user = getUser($_POST["username"]);
-	                if($user != null) {
-						//controleer zijn wachtwoord
-						if (verifyPassword($_POST["password"], $user['password'])) {
-							$_SESSION["username"] = $_POST["username"];
-							header("location:overview");
-						} 
-						else{
-						echo"Verify failed! Please, insert the correct data.";
+	              if($user != null) {
+						    //controleer zijn wachtwoord
+						        if (verifyPassword($_POST["password"], $user['password'])) 
+                    {
+							       $_SESSION["username"] = $_POST["username"];
+							       header("location:overview");
+						        } 
+					   	else
+            {
+						  echo"Verify failed! Please, insert the correct data.";
 						}
-	                }	
-           }
+          }	
+       }
     }
-      //header("location:login");
  }
 
 
