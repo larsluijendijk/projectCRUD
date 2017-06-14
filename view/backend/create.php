@@ -11,6 +11,7 @@ require("include.php");
 	<title>Create</title>
 </head>
 <body>
+<div class="containers">
 	<form  method="post" action="<?= URL ?>backend/createSave" enctype="multipart/form-data">
 	Name:
 	<input type="text" id="name" name="name">
@@ -30,7 +31,6 @@ require("include.php");
 </select>
 	<input type="submit" name="submit">
 	</form>
-	</div>
     </table>
     <a href="<?= URL ?>backend/index">List</a>
 </div>

@@ -35,10 +35,11 @@ function create()
 }
 function createSave()
 {
-	uploadfile($_FILES);
-	if (isset($_POST['name']) && isset($_POST['description']) && isset($_POST['image']) && isset($_POST['price'])){
-		var_dump($_POST);
-		createClient($_POST['name'], $_POST['description'], $_POST['image'], $_POST['price']);
+	uploadfile($_FILES['fileToUpload']);
+	var_dump($file_destination);
+	if (isset($_POST['name']) && isset($_POST['description']) && isset($file_destination) && isset($_POST['price'])){
+		var_dump($file_destination);
+        createClient($_POST['name'], $_POST['description'], $file_destination, $_POST['price']);
 	}
 }
 function createUpdate()
@@ -59,5 +60,4 @@ function edit($id)
 		createUpdate();
 	}
 
-}	
-
+}

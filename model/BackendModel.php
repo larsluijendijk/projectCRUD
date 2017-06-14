@@ -79,12 +79,12 @@ function pia(){
 }
 
 
-function createClient($name, $description, $image, $price) 
+function createClient($name, $description, $file_destination, $price) 
 {
   $db = openDatabaseConnection();
   // echo test om te kijken of ie binnen komt
   var_dump($_POST);
-  $sql = "INSERT INTO product(name, description, image, price) VALUES (:name, :description, :image, :price)";
+  $sql = "INSERT INTO product(name, description, image, price) VALUES (:name, :description, :file_destination, :price)";
   $query = $db->prepare($sql);
   $query->execute(array(
     ':name' => $name,
@@ -145,6 +145,9 @@ function showUpdateProduct($id){
 }
 
 function uploadFile ($file){
+    //var_dump($file);
+    //die();
+    
 	// Files Inhoud:
 	if ($file['size'] == 0) return null;
 	$file_name=$file['name'];
@@ -172,18 +175,18 @@ function uploadFile ($file){
 	// De naam van de file wordt random gemaakt:
 	            $file_name_new = uniqid('',true) . '.' . $file_ext;
 	// De plek waar het opgeslagen wordt:
-	            $file_destination = '../public/img' . $file_name_new;
+	            $file_destination = '../public/img/' . $file_name_new;
 	// Als het verplaatsen van de file gelukt is:
 	            if(move_uploaded_file($file_tmp, $file_destination)) {
 	                   return $file_destination;
                 }
                 else {
-                    // Todo errorhandling
+                    echo "there is no file to upload";
                 }
             }
         }
     }
-    return null;
+    //return null;
 }
 
 ?>
