@@ -36,7 +36,6 @@ function create()
 function createSave()
 {
 	uploadfile($_FILES['fileToUpload']);
-	var_dump($file_destination);
 	if (isset($_POST['name']) && isset($_POST['description']) && isset($file_destination) && isset($_POST['price'])){
 		var_dump($file_destination);
         createClient($_POST['name'], $_POST['description'], $file_destination, $_POST['price']);

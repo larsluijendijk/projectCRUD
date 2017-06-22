@@ -177,16 +177,10 @@ function uploadFile ($file){
 	// De plek waar het opgeslagen wordt:
 	            $file_destination = '../public/img/' . $file_name_new;
 	// Als het verplaatsen van de file gelukt is:
-	            if(move_uploaded_file($file_tmp, $file_destination)) {
 	                   return $file_destination;
-                }
-                else {
-                    echo "there is no file to upload";
-                }
             }
         }
     }
     //return null;
 }
-
 ?>

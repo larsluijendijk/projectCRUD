@@ -36,9 +36,3 @@ require("include.php");
 </div>
 </body>
 </html>
-
-
-
-
-
-
