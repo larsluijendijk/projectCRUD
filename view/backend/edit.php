@@ -1,3 +1,6 @@
+<?php require '../public/css/header.php'; ?>
+
+
 <?php
 require("include.php");
 ?>
@@ -17,6 +20,8 @@ require("include.php");
 	</form>
 
 </div>
+
+<?php require '../public/css/footer.php'; ?>
 
 
 

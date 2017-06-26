@@ -11,19 +11,19 @@
         <div class="row">
             <div class="col-lg-4">
                 <h3 class="text-center text-lg text-uppercase my-0"><strong><a href="<?= URL ?>home/stoelen">Stoelen</a></strong></h3>
-                <img width="304" height="130" src="<?= URL ?>img/stoel-example.png" alt="">
+                <img width="304" height="130" src="<?= URL ?>img/stoel-show.jpg" alt="">
             </div>
             <div class="col-lg-4">
                <h3 class="text-center text-lg text-uppercase my-0"><strong><a href="<?= URL ?>home/tafels">Tafels</a></strong></h3>
-                <img width="304" height="130" src="<?= URL ?>img/table.png" alt="">
+                <img width="304" height="130" src="<?= URL ?>img/tafel-show.jpg" alt="">
             </div>
             <div class="col-lg-4">
                <h3 class="text-center text-lg text-uppercase my-0"><strong><a href="<?= URL ?>home/verlichtingen">Verlichting</a></strong></h3>
-                <img width="304" height="130" src="<?= URL ?>img/lamp-2.png" alt="">
+                <img width="304" height="130" src="<?= URL ?>img/lamp-show.jpg" alt="">
             </div>
             <div class="col-lg-4">
                <h3 class="text-center text-lg text-uppercase my-0"><strong><a href="<?= URL ?>home/diverse">Diverse</a></strong></h3>
-                <img width="304" height="130" src="<?= URL ?>img/pot.png" alt="">
+                <img width="304" height="130" src="<?= URL ?>img/diverse-show.jpg" alt="">
             </div>
         </div>
     </div>

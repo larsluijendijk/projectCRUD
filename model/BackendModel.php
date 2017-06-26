@@ -89,21 +89,11 @@ function createClient($name, $description, $file_destination, $price)
   $query->execute(array(
     ':name' => $name,
     ':description' => $description,
-    ':image' => $image,
+    ':file_destination' => $file_destination,
     ':price' => $price
     ));
 
   $db = null;
-  header("Location:" . URL . "backend/view");
-
-
-}
-
-function delete($id)
-{
-  if (isset($id)) {
-    deleteProduct($id);
-  }
 }
 
 function deleteProduct($id) 
@@ -117,7 +107,18 @@ function deleteProduct($id)
         ));
 
     $db = null;
-    header("Location:" . URL . "backend/view");
+}
+
+function getProductById($id){
+    $db = openDatabaseConnection();
+  // prepare query and execute
+  $sql = "SELECT * FROM product WHERE id=:id";
+  $query = $db->prepare($sql);
+  $query->execute(array(
+    ':id' => $id
+  ));
+  $db = null;
+  return $query->fetch(PDO::FETCH_ASSOC); 
 }
 
 function updateProduct($id, $name, $description, $image, $price) 
@@ -145,6 +146,7 @@ function showUpdateProduct($id){
 }
 
 function uploadFile ($file){
+  $file_destination = null;
     //var_dump($file);
     //die();
     
@@ -177,10 +179,12 @@ function uploadFile ($file){
 	// De plek waar het opgeslagen wordt:
 	            $file_destination = '../public/img/' . $file_name_new;
 	// Als het verplaatsen van de file gelukt is:
-	                   return $file_destination;
+	            if (move_uploaded_file($file_tmp, $file_destination)) {
+                var_dump('upload gelukt!');
+              }
             }
         }
     }
-    //return null;
+    return $file_destination;
 }
 ?>

@@ -1,3 +1,6 @@
+<?php require '../public/css/header.php'; ?>
+
+
 <?php
 require("include.php");
 ?>
@@ -13,15 +16,34 @@ require("include.php");
 <body>
 <div class="containers">
 	<form  method="post" action="<?= URL ?>backend/createSave" enctype="multipart/form-data">
-	Name:
-	<input type="text" id="name" name="name">
-	Description: 
-	<input type="text" id="description" name="description">
-	Image:
-	<!-- type='date' zorgt ervoor dat je een datum kiest XD -->
-	<input type="file" name="fileToUpload" id="fileToUpload">
-	Price:
-	<input type="text" id="price" name="price">
+	<div class="form-group">
+			<label for="stamnia" class="col-sm-2 col-form-label">Name:</label>
+			<div class="col-sm-10">
+				<input class="form-control" type="text" id="name" name="name">
+			</div>
+		</div>
+
+	<div class="form-group">
+			<label for="stamnia" class="col-sm-2 col-form-label">Description:</label>
+			<div class="col-sm-10">
+				<input class="form-control" type="text" id="description" name="description">
+			</div>
+		</div>
+
+	<div class="form-group">
+			<label for="stamnia" class="col-sm-2 col-form-label">Image:</label>
+			<div class="col-sm-10">
+				<input class="form-control" type="file" id="fileToUpload" name="fileToUpload">
+			</div>
+		</div>
+
+	<div class="form-group">
+			<label for="stamnia" class="col-sm-2 col-form-label">Price:</label>
+			<div class="col-sm-8">
+				<input class="form-control" type="text" id="price" name="price">
+			</div>
+		</div>
+
 <select name="category">
   <option value="lamp">Lamp</option>
   <option value="table">Tafel</option>
@@ -36,3 +58,5 @@ require("include.php");
 </div>
 </body>
 </html>
+
+<?php require '../public/css/footer.php'; ?>

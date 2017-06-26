@@ -1,3 +1,5 @@
+<?php require '../public/css/header.php'; ?>
+
 <?php
 require("include.php");
 ?>
@@ -70,14 +72,14 @@ function openNav() {
 function closeNav() {
     document.getElementById("mySidenav").style.width = "0";
 }
-
+<?php require '../public/css/header.php'; ?>
 </script>
      
 </body>
 </html> 
 <!-- <div class="row marketing">
 <div class="container"> -->
-  <table border="1">
+  <table border="1" class="table table-hover">
     <tr>
       <th>Foto</th>
       <th>Naam</th>
@@ -97,10 +99,12 @@ function closeNav() {
       <td><?= $product['description']; ?></td>
       <td>€<?= $product['price']; ?></td>
       <td><?= $product['category']; ?></td> 
-      <td><a href="<?= URL ?>backend/edit/<?= $product['id'] ?>">Edit</a></td>
-      <td><a href="<?= URL ?>backend/delete/<?= $product['id'] ?>" onclick="return confirm('Are you sure you want to delete this item?');"">Delete</a></td>
+      <td><a href="<?= URL ?>backend/edit/<?= $product['id'] ?>" "<button type="button" class="btn btn-warning ">Edit</a></td>
+      <td><a href="<?= URL ?>backend/delete/<?= $product['id'] ?>" " "<button type="button" class="btn btn-danger " onclick="return confirm('Are you sure you want to delete this item?');"">Delete</a></td>
     </tr>
     <?php } ?>
-  <a href="<?= URL ?>backend/create">Toevoegen</a>
+  <a href="<?= URL ?>backend/create" type="button" class="btn btn-success">Toevoegen</a>
 <!-- </div>
 </div> 
+
+<?php require '../public/css/footer.php'; ?>

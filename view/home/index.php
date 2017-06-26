@@ -8,23 +8,16 @@
                 <ol class="carousel-indicators">
                     <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
                     <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
                 </ol>
                 <div class="carousel-inner" role="listbox">
                     <div class="carousel-item active">
-                        <img class="d-block img-fluid w-100" src="<?= URL ?>img/slide-1.jpg" alt="">
+                        <img class="d-block img-fluid w-100" src="<?= URL ?>img/slide-3.jpg" alt="">
                         <div class="carousel-caption d-none d-md-block">
                             <h3 class="text-shadow">Vintage Design</h3>
                         </div>
                     </div>
                     <div class="carousel-item">
                         <img class="d-block img-fluid w-100" src="<?= URL ?>img/slide-2.jpg" alt="">
-                        <div class="carousel-caption d-none d-md-block">
-                            <h3 class="text-shadow">Vintage Design</h3>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <img class="d-block img-fluid w-100" src="<?= URL ?>img/slide-3.jpg" alt="">
                         <div class="carousel-caption d-none d-md-block">
                             <h3 class="text-shadow">Vintage Design</h3>
                         </div>

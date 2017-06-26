@@ -25,5 +25,25 @@ function stoelen()
     	'stoelen' => getAllStoelen()
     	));
 }
+function tafels()
+{
+    render("home/tafels", array(
+        'tafels' => getAllTafels()
+        ));
+}
 
+function verlichtingen()
+{
+    render("home/verlichtingen", array(
+        'verlichtingen' => getAllVerlichtingen()
+        ));
+}
+
+
+function diverse()
+{
+    render("home/diverse", array(
+        'diverse' => getAllDiverse()
+        ));
+}
 ?>
